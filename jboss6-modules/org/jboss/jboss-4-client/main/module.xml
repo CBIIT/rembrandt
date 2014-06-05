@@ -1,0 +1,17 @@
+<module xmlns="urn:jboss:module:1.1" name="org.jboss.jboss-4-client">
+    <resources>
+	<resource-root path="jbossall-client.jar"/>
+        
+    </resources>
+
+    <dependencies>
+        <module name="javax.api"/>
+        <module name="javax.jms.api"/>
+	<module name="javax.transaction.api"/>
+	<module name="org.apache.log4j"/>
+       <module name="org.jboss.remote-naming"/>
+<!-- we depend on org.hornetq module since we will send messages to  -->
+       <!-- the HornetQ server embedded in the local AS7 instance           -->
+       <module name="org.hornetq" />
+    </dependencies>
+</module>
