@@ -56,7 +56,7 @@ data-source add \
     --connection-url=jdbc:oracle:thin:@ncidb-int-d.nci.nih.gov:1550:INTDEV \
     --jndi-name=java:jboss/rembrandt \
     --user-name=rembdev \
-    --password=rembpassword \
+    --password=DB_PASSWORD \
     --use-ccm=false \
     --max-pool-size=100 \
     --blocking-timeout-wait-millis=5000 
@@ -73,7 +73,7 @@ data-source add \
     --connection-url=jdbc:oracle:thin:@ncidb-int-d.nci.nih.gov:1550:INTDEV \
     --jndi-name=java:jboss/rembrandtcsm \
     --user-name=rembdev \
-    --password=rembpassword \
+    --password=DB_PASSWORD \
     --use-ccm=false \
     --max-pool-size=100 \
     --blocking-timeout-wait-millis=5000 
