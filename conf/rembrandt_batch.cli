@@ -1,5 +1,5 @@
 # Rembrandt CLI script
-connect
+connect localhost:10099
 
 ##############################################################
 #             System Properties                      
