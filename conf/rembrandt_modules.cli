@@ -7,4 +7,7 @@ module add --name=com.oracle --resources=/local/content/jboss/modules/com/oracle
 ### CSM security module
 module add --name=gov.nih.nci.security --resources=/local/content/jboss/modules/gov/nih/nci/security/main/csmapi-5.1.jar --dependencies=org.apache.log4j,org.hibernate,org.jdom,org.slf4j.jcl-over-slf4j
 
+###  org.jboss.jboss-4-client for jms
+module add --name=org.jboss.jboss-4-client --resources=/local/content/jboss/modules/org/jboss/jboss-4-client/main/jbossall-client.jar --dependencies=javax.api,javax.jms.api,javax.transaction.api,org.apache.log4j,org.jboss.remote-naming,org.hornetq
+
 reload
