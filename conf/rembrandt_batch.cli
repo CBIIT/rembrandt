@@ -63,8 +63,6 @@ data-source add \
 data-source enable --name=rembrandt
 end-if
 
-
-
 if (outcome != success) of /subsystem=datasources/datasource=rembrandtcsm:read-resource
 #    data-source remove --name=rembrandtcsm
 data-source add \
@@ -110,18 +108,5 @@ if (outcome == success) of /subsystem=security/security-domain=rembrandt/authent
 ) {allow-resource-service-restart=true}
 end-if
 
-##############################################################
-#               JMS configuration                             
-##############################################################
-if (outcome == success) of /subsystem=messaging/hornetq-server=default/jms-queue=SharedAnalysisRequest:read-resource 
-   jms-queue remove --queue-address=SharedAnalysisRequest
-end-if
-jms-queue add --queue-address=SharedAnalysisRequest --entries=queue/SharedAnalysisRequest,java:jboss/queue/SharedAnalysisRequest
-
-if (outcome == success) of /subsystem=messaging/hornetq-server=default/jms-queue=RembrandtAnalysisResponse:read-resource 
-   jms-queue remove --queue-address=RembrandtAnalysisResponse
-end-if
-jms-queue add --queue-address=RembrandtAnalysisResponse --entries=queue/RembrandtAnalysisResponse,java:jboss/queue/RembrandtAnalysisResponse
- 
 # Execute and reload
 :reload
