@@ -1,7 +1,11 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
 <jboss-deployment-structure>
  <deployment>
-         
+ 
+ 	<dependencies>  
+            <module name="org.jboss.jboss-4-client" />  
+        </dependencies>
+        
  	<!-- Exclusions allow you to prevent the server from automatically 
 		adding some dependencies -->
  	<exclusions>
