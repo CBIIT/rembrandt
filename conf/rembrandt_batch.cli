@@ -109,4 +109,4 @@ if (outcome == success) of /subsystem=security/security-domain=rembrandt/authent
 end-if
 
 # Execute and reload
-:reload
+reload
