@@ -7,7 +7,8 @@
 <span>
 	 <xsl:if test="@reportType != 'Copy Number' and @reportType != 'Clinical'" >
  
-		<xsl:value-of select="' , '"/>
+		<xsl:text>&#x9;</xsl:text>
+		
 		<xsl:for-each select="Row[(@name='dataRow')]">
 	  		<xsl:value-of select="Cell[1]/Data" />
 	  		<xsl:if test="position() != last()">
@@ -18,7 +19,7 @@
 			</xsl:if>
   		</xsl:for-each>
   		
-  		<xsl:value-of select="' , '"/>
+  		<xsl:text>&#x9;</xsl:text>
   		<xsl:for-each select="Row[(@name='dataRow')]">
 	  		<xsl:value-of select="Cell[2]/Data" />
 	  		<xsl:if test="position() != last()">
