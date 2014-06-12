@@ -88,13 +88,13 @@ reload
 ##############################################################
 #module add --name=gov.nih.nci.security --resources=artifacts\csm\csmapi-5.1.jar --dependencies=org.apache.log4j,org.hibernate,org.jdom,org.slf4j.jcl-over-slf4j
 
-if (outcome == success) of /subsystem=security/security-domain=rembrandt:read-resource 
+if (outcome != success) of /subsystem=security/security-domain=rembrandt:read-resource 
 #	/subsystem=security/security-domain=rembrandt/:remove {allow-resource-service-restart=true}
 /subsystem=security/security-domain=rembrandt/:add(cache-type=default)
 end-if
 
 
-if (outcome == success) of /subsystem=security/security-domain=rembrandt/authentication=classic:read-resource 
+if (outcome != success) of /subsystem=security/security-domain=rembrandt/authentication=classic:read-resource 
 #   /subsystem=security/security-domain=rembrandt/authentication=classic:remove() {allow-resource-service-restart=true}
 /subsystem=security/security-domain=rembrandt/authentication=classic:add( \
     login-modules=[ \   
