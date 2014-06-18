@@ -53,9 +53,9 @@ if (outcome != success) of /subsystem=datasources/datasource=rembrandt:read-reso
 data-source add \
     --name=rembrandt \
     --driver-name=oracle \
-    --connection-url=jdbc:oracle:thin:@ncidb-int-d.nci.nih.gov:1550:INTDEV \
+    --connection-url=DB_CONNECTION_URL \
     --jndi-name=java:jboss/rembrandt \
-    --user-name=rembdev \
+    --user-name=DB_USERNAME \
     --password=DB_PASSWORD \
     --use-ccm=false \
     --max-pool-size=100 \
@@ -68,9 +68,9 @@ if (outcome != success) of /subsystem=datasources/datasource=rembrandtcsm:read-r
 data-source add \
     --name=rembrandtcsm \
     --driver-name=oracle \
-    --connection-url=jdbc:oracle:thin:@ncidb-int-d.nci.nih.gov:1550:INTDEV \
+    --connection-url=DB_CONNECTION_URL \
     --jndi-name=java:jboss/rembrandtcsm \
-    --user-name=rembdev \
+    --user-name=DB_USERNAME \
     --password=DB_PASSWORD \
     --use-ccm=false \
     --max-pool-size=100 \
