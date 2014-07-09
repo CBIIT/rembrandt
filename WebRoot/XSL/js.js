@@ -819,7 +819,7 @@ function processHighlightForm(key, ac)	{
 	
 	var rn = Math.floor(Math.random()*11)
 	
-	document.highlight_form.action = "testReport.do?key="+k+"&r="+rn; 
+	document.highlight_form.action = "testReport.action?key="+k+"&r="+rn; 
 	if(ac == "unhighlight")	{
 		document.highlight_form.p_highlight.value="";
 	}
@@ -831,7 +831,7 @@ function processFilterForm(key, ac)	{
 	
 	var rn = Math.floor(Math.random()*11)
 	
-	document.pval_filter_form.action = "testReport.do?key="+k+"&r="+rn; 
+	document.pval_filter_form.action = "testReport.action?key="+k+"&r="+rn; 
 	if(ac == "reset")	{
 		document.pval_filter_form.p_pval_filter_value.value='';
 	}
