@@ -1298,7 +1298,7 @@ public class ComparativeGenomicForm extends BaseForm implements Serializable, Cl
 		//chromosome can be found.  It is NOT the actual chromosome
 		//number.  Chromosome numbers can actually be characters, like
 		// X and Y so we 
-		this.chromosomeNumber = chromosomeIndex;
+		this.chromosomeNumber = MoreStringUtils.cleanJavascript(chromosomeIndex);
 		if(!"".equals(chromosomeIndex) && !"-1".equals(chromosomeIndex)) {
 			//Get the chromosome from the Chromosome List
 			try {

@@ -1768,7 +1768,7 @@ public class ClinicalDataForm extends BaseForm implements Serializable, Cloneabl
 	 * @param onStudySurgeryTitle The onStudySurgeryTitle to set.
 	 */
 	public void setOnStudySurgeryTitle(String onStudySurgeryTitle) {
-		this.onStudySurgeryTitle = onStudySurgeryTitle;
+		this.onStudySurgeryTitle = MoreStringUtils.cleanJavascript(onStudySurgeryTitle);
 	}
 		
 	public void setOnStudySurgeryTitleDetails() {

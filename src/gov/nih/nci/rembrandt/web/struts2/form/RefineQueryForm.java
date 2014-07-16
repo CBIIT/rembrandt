@@ -483,6 +483,12 @@ public class RefineQueryForm extends BaseForm implements Factory {
 	/**
 	 * @param isAllGenesQuery The isAllGenesQuery to set.
 	 */
+	public void setIsAllGenesQuery(String isAllGenesQuery) {
+		this.isAllGenesQuery = false;  // For Appscan fix, since somehow appscan somehow converts the boolean submittal to a string
+	}	
+	/**
+	 * @param isAllGenesQuery The isAllGenesQuery to set.
+	 */
 	public void setIsAllGenesQuery(boolean isAllGenesQuery) {
 		this.isAllGenesQuery = isAllGenesQuery;
 	}
