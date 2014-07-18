@@ -1028,7 +1028,7 @@ public class GeneExpressionForm extends BaseForm implements Serializable, Clonea
 	}
 
 	public void setChromosomeNumber(String chromosomeNumber) {
-		this.chromosomeNumber = chromosomeNumber;
+		this.chromosomeNumber = MoreStringUtils.cleanJavascript(chromosomeNumber);
 		if(!"".equals(chromosomeNumber) && !"-1".equals(chromosomeNumber)) {
 			//Get the chromosome from the Chromosome List
 			try {

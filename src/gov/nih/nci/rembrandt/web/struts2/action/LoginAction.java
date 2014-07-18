@@ -172,6 +172,7 @@ public final class LoginAction extends ActionSupport implements ServletRequestAw
         	return "failure";  
         }
         
+        session = this.servletRequest.getSession();
         session.setAttribute("autoLogged", "no");
         
         //Shan: seems this is never set to "no"
@@ -334,9 +335,9 @@ public final class LoginAction extends ActionSupport implements ServletRequestAw
 		*/
 		String error = "";
 		if (credentials != null && credentials.authenticated()) {
-			//request.getSession().invalidate();
+			this.servletRequest.getSession().invalidate();
 			this.loginForm.setUserLoggedIn(true);
-			this.servletRequest.getSession().setAttribute(RembrandtConstants.USER_CREDENTIALS,credentials);
+			this.servletRequest.getSession(true).setAttribute(RembrandtConstants.USER_CREDENTIALS,credentials);
 		} else {
 			error = ApplicationContext.getLabelProperties().getProperty(
 	    			"gov.nih.nci.nautilus.ui.struts.form.invalidLogin.error");

@@ -76,7 +76,7 @@ L--%>
 			<!-- Disabled due to inability to login to caArray after jboss 6 upgrade -->
 			<legend class="red">caArray File Download is unavailable at this time <br>
 				as we are unable to successfully connect with caArray server,<br> 
-				Please click <a href="" onclick="javascript:spawnCentered('jsp/caArrayQueryInstructions.jsp', 580, 400);" > here </span></a>
+				Please click <a href="" onclick="javascript:spawnCentered('jsp/caArrayQueryInstructions.jsp', 580, 400); return false;" > here </span></a>
 				for instructions to query Rembrandt Data in caArray site directly.</legend><br/>
 			
 	       		<input type="submit" disabled value="download" style="width:70px;"/>	 

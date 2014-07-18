@@ -133,7 +133,7 @@ public class QuickSearchForm extends BaseForm implements GeneValidator{
 	}
 
 	public void setPlot(String str) {
-		plot = str;
+		plot = MoreStringUtils.cleanJavascript(str);
 	}
 
 	public void setQuickSearchName(String str) {	    
@@ -147,7 +147,7 @@ public class QuickSearchForm extends BaseForm implements GeneValidator{
 	}
 
 	public void setQuickSearchType(String str) {
-		this.quickSearchType = str;
+		this.quickSearchType = MoreStringUtils.cleanJavascript(str);
 	}
 
 	public String getQuickSearchType() {
@@ -168,7 +168,7 @@ public class QuickSearchForm extends BaseForm implements GeneValidator{
         if(geneSymbol != null){
             geneSymbol = geneSymbol.trim();
         }
-       this.quickSearchName = geneSymbol;
+       this.quickSearchName = MoreStringUtils.cleanJavascript(geneSymbol);
         
     }
 
@@ -184,7 +184,7 @@ public class QuickSearchForm extends BaseForm implements GeneValidator{
 	}
 
 	public void setGroupName(String groupName) {
-		this.groupName = groupName;
+		this.groupName = MoreStringUtils.cleanJavascript(groupName);
 	}
 
 	public String getGroupNameCompare() {
@@ -192,7 +192,7 @@ public class QuickSearchForm extends BaseForm implements GeneValidator{
 	}
 
 	public void setGroupNameCompare(String groupNameCompare) {
-		this.groupNameCompare = groupNameCompare;
+		this.groupNameCompare = MoreStringUtils.cleanJavascript(groupNameCompare);
 	}
 
 	
@@ -211,7 +211,7 @@ public class QuickSearchForm extends BaseForm implements GeneValidator{
 	}
 
 	public void setBaselineGroup(String baselineGroup) {
-		this.baselineGroup = baselineGroup;
+		this.baselineGroup = MoreStringUtils.cleanJavascript(baselineGroup);
 	}
 	
 //	public List<LabelValueBean> getSampleGroupListWithExtra() {
