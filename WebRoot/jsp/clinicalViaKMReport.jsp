@@ -18,7 +18,28 @@ gov.nih.nci.rembrandt.web.factory.*, gov.nih.nci.rembrandt.web.bean.*, org.dom4j
 <%@ page import="gov.nih.nci.rembrandt.web.factory.ApplicationFactory, gov.nih.nci.caintegrator.ui.graphing.data.kaplanmeier.KaplanMeierStoredData,org.apache.commons.beanutils.BeanUtils" %>
 <%@ page import="gov.nih.nci.rembrandt.web.bean.*,gov.nih.nci.rembrandt.cache.RembrandtPresentationTierCache,java.util.*,java.lang.*,gov.nih.nci.caintegrator.dto.view.ViewFactory,gov.nih.nci.caintegrator.dto.view.ViewType,gov.nih.nci.rembrandt.cache.RembrandtPresentationTierCache,gov.nih.nci.caintegrator.ui.graphing.data.kaplanmeier.KaplanMeierSampleInfo" %>
 
-
+<html>
+  	<head>
+		<title>My Report</title>
+		
+		<LINK href="/rembrandt/XSL/css.css" rel="stylesheet" type="text/css" />
+		<script language="JavaScript" type="text/javascript" src="/rembrandt/js/overlib.js"></script>
+		<script language="JavaScript" type="text/javascript" src="js/overlib_hideform.js"></script>
+		<script language="JavaScript" type="text/javascript" src="js/caIntScript.js"></script> 
+		<script language="JavaScript" type="text/javascript" src="XSL/js.js"></script> 
+		<script language="JavaScript" type="text/javascript" src="XSL/a_saveSamples.js"></script>
+		<script language="JavaScript" type="text/javascript" src="js/lib/prototype_1.5pre.js"></script>
+		<script language="javascript" src="js/lib/Help.js"></script>
+		<script language="javascript" src="js/lib/json.js"></script>
+		<script type='text/javascript' src='/rembrandt/dwr/interface/DynamicReport.js'></script>
+		<script type='text/javascript' src='/rembrandt/dwr/engine.js'></script>
+		<script type='text/javascript' src='/rembrandt/dwr/util.js'></script>
+		<script language="JavaScript" type="text/javascript" src="js/rembrandtScript.js"></script>
+		<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE" />
+		<META HTTP-EQUIV="Expires" CONTENT="-1" />
+		
+		
+	</head>
 	<%
 	RembrandtPresentationTierCache presentationTierCache = ApplicationFactory.getPresentationTierCache();
 	String sampleGroup = request.getParameter("sampleGroup");
@@ -122,7 +143,7 @@ gov.nih.nci.rembrandt.web.factory.*, gov.nih.nci.rembrandt.web.bean.*, org.dom4j
 	%>		
 	
 	
-	
+</html>	
 	
 
 

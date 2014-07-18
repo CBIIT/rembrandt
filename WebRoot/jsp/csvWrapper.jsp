@@ -15,7 +15,32 @@ gov.nih.nci.rembrandt.web.factory.*, gov.nih.nci.rembrandt.web.bean.*,
 org.dom4j.Document, gov.nih.nci.rembrandt.util.*,
 gov.nih.nci.rembrandt.web.factory.ApplicationFactory,
 gov.nih.nci.rembrandt.cache.RembrandtPresentationTierCache,gov.nih.nci.rembrandt.web.xml.*,
-java.util.HashMap, java.util.ArrayList" %><%
+java.util.HashMap, java.util.ArrayList" %>
+
+<html>
+  	<head>
+		<title>My Report</title>
+		
+		<LINK href="/rembrandt/XSL/css.css" rel="stylesheet" type="text/css" />
+		<script language="JavaScript" type="text/javascript" src="/rembrandt/js/overlib.js"></script>
+		<script language="JavaScript" type="text/javascript" src="js/overlib_hideform.js"></script>
+		<script language="JavaScript" type="text/javascript" src="js/caIntScript.js"></script> 
+		<script language="JavaScript" type="text/javascript" src="XSL/js.js"></script> 
+		<script language="JavaScript" type="text/javascript" src="XSL/a_saveSamples.js"></script>
+		<script language="JavaScript" type="text/javascript" src="js/lib/prototype_1.5pre.js"></script>
+		<script language="javascript" src="js/lib/Help.js"></script>
+		<script language="javascript" src="js/lib/json.js"></script>
+		<script type='text/javascript' src='/rembrandt/dwr/interface/DynamicReport.js'></script>
+		<script type='text/javascript' src='/rembrandt/dwr/engine.js'></script>
+		<script type='text/javascript' src='/rembrandt/dwr/util.js'></script>
+		<script language="JavaScript" type="text/javascript" src="js/rembrandtScript.js"></script>
+		<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE" />
+		<META HTTP-EQUIV="Expires" CONTENT="-1" />
+		
+		
+	</head>
+
+<%
 
 String key = request.getParameter("key")!=null ? (String) request.getParameter("key") : null;
 	if(key != null)	{
@@ -64,3 +89,4 @@ String key = request.getParameter("key")!=null ? (String) request.getParameter("
 		out.println("Error Generating the CSV.");
 	}
 %>
+</html>
